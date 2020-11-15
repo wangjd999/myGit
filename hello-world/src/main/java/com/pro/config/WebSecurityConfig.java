@@ -1,6 +1,5 @@
 package com.pro.config;
 
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /**
  * @Author: wangxiaoqiang
@@ -8,5 +7,5 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @Description: security配置
  */
 
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
-}
+//public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
+//}

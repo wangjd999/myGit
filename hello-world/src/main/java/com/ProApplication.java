@@ -1,13 +1,15 @@
-package com.wjd;
+package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-public class HelloWorldApplication {
+@MapperScan("com.pro.mapper")
+public class ProApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloWorldApplication.class, args);
+		SpringApplication.run(ProApplication.class, args);
 	}
 
 }
