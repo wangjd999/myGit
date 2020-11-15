@@ -8,10 +8,10 @@
     <version>2.3.3.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
-  <groupId>com.wjd</groupId>
-  <artifactId>hello-world</artifactId>
+  <groupId>com.pro</groupId>
+  <artifactId>pro</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>hello-world</name>
+  <name>pro</name>
   <description>Demo project for Spring Boot</description>
 
   <properties>
