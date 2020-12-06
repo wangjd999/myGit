@@ -21,13 +21,4 @@ public class UserController {
     @Resource
     private UserService userService;
 
-    @RequestMapping("/getAllUser")
-    public RequestBean getAllUser(){
-        List<User> allUser = userService.getAllUser();
-        return RequestBean.builder()
-                .code("200")
-                .message("查询成功")
-                .data(allUser)
-                .build();
-    }
 }

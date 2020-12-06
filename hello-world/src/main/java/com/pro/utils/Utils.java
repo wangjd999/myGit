@@ -1,5 +1,8 @@
 package com.pro.utils;
 
+import com.pro.entity.User;
+import org.springframework.security.core.context.SecurityContextHolder;
+
 import java.util.UUID;
 
 /**
@@ -11,5 +14,10 @@ import java.util.UUID;
 public class Utils {
     private static String getUUID(){
         return UUID.randomUUID().toString();
+    }
+
+    public static User getCurrentUser() {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return user;
     }
 }
