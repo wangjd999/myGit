@@ -1,7 +1,10 @@
 package com.pro.config;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.pro.service.UserService;
 import com.pro.service.impl.UserServiceImpl;
+import com.pro.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -61,7 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
                 httpServletResponse.setContentType("application/json;charset=utf-8");
                 PrintWriter out = httpServletResponse.getWriter();
-                out.write("{\"status\":\"success\",\"msg\":\"登录成功\"}");
+                out.write("{\"status\":\"success\",\"msg\":\"登录成功\",\"user\":"+ JSONObject.toJSONString(Utils.getCurrentUser()) +"}");
                 out.flush();
                 out.close();
             }
