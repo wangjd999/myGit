@@ -1,0 +1,24 @@
+server:
+    port: 8888
+spring:
+    thymeleaf:
+        prefix: classpath:/templates/
+        suffix: .html
+
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://106.54.67.25:3306/pro?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        username: root
+        password: root123.
+#    redis:
+#        host: 106.54.67.25
+#        port: 6379
+#        password: root123.
+
+mybatis:
+    config-location: classpath:/mybatis-config.xml
+mapper:
+    mapper: com.pro.mapper
+    not-empty: false
+    identity: MYSQL
+
