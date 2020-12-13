@@ -25,12 +25,33 @@ import java.util.List;
 @Builder
 @Table(name = "t_user")
 public class User implements UserDetails {
+    /**
+     * 编号
+     */
     private String id;
+    /**
+     * 账号
+     */
     private String username;
+    /**
+     * 密码
+     */
     private String password;
+    /**
+     * 姓名
+     */
     private String name;
+    /**
+     * 性别 0 男 1 女
+     */
     private String sex;
+    /**
+     * 创建日期
+     */
     private LocalDateTime createDate;
+    /**
+     * 角色
+     */
     private List<Role> roles;
 
     @Override
