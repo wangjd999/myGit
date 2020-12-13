@@ -20,7 +20,7 @@ public class UserController {
     @Resource
     private UserService userService;
 
-    @RequestMapping("getCurrentUser")
+    @RequestMapping("/getCurrentUser")
     public ResponseBean getCurrentUser() {
         return ResponseBean.builder()
                 .code(200)
@@ -28,7 +28,7 @@ public class UserController {
                 .message("获取用户成功").build();
     }
 
-    @RequestMapping("getAllUser")
+    @RequestMapping("/getAllUser")
     public ResponseBean getAllUser() {
 
         return ResponseBean.builder()

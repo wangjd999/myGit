@@ -77,7 +77,7 @@ public class ExceptionAdvice {
      * Exception
      */
     @ExceptionHandler(value = RuntimeException.class)
-    public ResponseBean allException(HttpServletRequest req, Exception e) {
+    public ResponseBean allException(HttpServletRequest req, RuntimeException e) {
         log.error("未知异常", e);
         return ResponseBean.buildBean(100,"未知异常，原因是："+e);
     }
